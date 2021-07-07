@@ -25,9 +25,9 @@ stages:
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/01_terraform_resourcegroup'
         backendServiceArm: 'Azure Pass - Sponsorship(a41112e8-e219-4b72-b0fa-b86a6ea338e5)'
-        backendAzureRmResourceGroupName: 'terraform-state-fab-rg'
-        backendAzureRmStorageAccountName: 'terraformstatefab056'
-        backendAzureRmContainerName: 'tfstate'
+        backendAzureRmResourceGroupName: 'terraformRg'
+        backendAzureRmStorageAccountName: 'terraformstacc1'
+        backendAzureRmContainerName: 'testcon'
         backendAzureRmKey: 'terraform.tfstate'
 
     - task: TerraformTaskV1@0
