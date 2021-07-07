@@ -24,7 +24,7 @@ stages:
         provider: 'azurerm'
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/01_terraform_resourcegroup'
-        backendServiceArm: 'Azure Pass - Sponsorship(a41112e8-e219-4b72-b0fa-b86a6ea338e5)'
+        backendServiceArm: 'Azure Pass - Sponsorship (6ef14172-b9b4-4dd8-8e89-05396bbae41a)'
         backendAzureRmResourceGroupName: 'terraformRg'
         backendAzureRmStorageAccountName: 'terraformstacc1'
         backendAzureRmContainerName: 'testcon'
@@ -37,7 +37,7 @@ stages:
         command: 'plan'
         workingDirectory: '$(System.DefaultWorkingDirectory)/01_terraform_resourcegroup'
         commandOptions: '-out tfplan'
-        environmentServiceNameAzureRM: 'Azure Pass - Sponsorship(a41112e8-e219-4b72-b0fa-b86a6ea338e5)'
+        environmentServiceNameAzureRM: 'Azure Pass - Sponsorship (6ef14172-b9b4-4dd8-8e89-05396bbae41a)'
 
     - script: |
           cd $(System.DefaultWorkingDirectory)/01_terraform_resourcegroup
@@ -104,9 +104,9 @@ stages:
         provider: 'azurerm'
         command: 'init'
         workingDirectory: '$(System.DefaultWorkingDirectory)/01_terraform_resourcegroup'
-        backendServiceArm: 'Azure Pass - Sponsorship(a41112e8-e219-4b72-b0fa-b86a6ea338e5)'
-        backendAzureRmResourceGroupName: 'terraform-state-fab-rg'
-        backendAzureRmStorageAccountName: 'terraformstatefab056'
+        backendServiceArm: 'Azure Pass - Sponsorship (6ef14172-b9b4-4dd8-8e89-05396bbae41a)'
+        backendAzureRmResourceGroupName: 'terraformRg'
+        backendAzureRmStorageAccountName: 'terraformstacc1'
         backendAzureRmContainerName: 'tfstate'
         backendAzureRmKey: 'terraform.tfstate'
 
@@ -117,4 +117,4 @@ stages:
         command: 'apply'
         workingDirectory: '$(System.DefaultWorkingDirectory)/01_terraform_resourcegroup'
         commandOptions: 'tfplan'
-        environmentServiceNameAzureRM: 'Azure Pass - Sponsorship(a41112e8-e219-4b72-b0fa-b86a6ea338e5)'
+        environmentServiceNameAzureRM: 'Azure Pass - Sponsorship (6ef14172-b9b4-4dd8-8e89-05396bbae41a)'
